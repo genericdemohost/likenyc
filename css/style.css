@@ -1,0 +1,438 @@
+body { 
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+/*STICKY FOOTER*/
+#footer { height: 100px; }
+
+
+/*NAVBAR styling begins*/
+
+.navbar-left img {
+    height: 40px;
+    /*By default, the navbar is 50px high. Resource: http://getbootstrap.com/components/#navbar-fixed-top*/
+}
+
+.navbar-brand {
+    font-size: 50px;
+    /*Below is what centers the brand in the middle of the navbar.*/
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+/*NAVBAR styling ends*/
+
+/*JUMBOTRON styling begins*/
+
+.jumbotron {
+    color: #fcb314;
+    /*This is the color we picked on Pixlr the first day of the group project.*/
+    text-align: center;
+}
+
+#jumbotron1 {
+    background-image: url("../img/nycphoto.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#time {
+    color: white;
+    text-align: center;
+    border: solid white 1px;
+    width: 125px;
+    height: 75px;
+    float: left;
+    margin: 0 10px;
+}
+
+#digitalclock {
+    color: #fcb314;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#weather {
+    color: white;
+    text-align: center;
+    border: solid white 1px;
+    width: 125px;
+    height: 75px;
+    float: right; /*This moves weather to lower right corner.*/
+    margin: 0 10px;
+}
+
+#weather .btn .btn-sm {
+    background-color: #fcb314;
+}
+
+.imageCredit {
+    float: right; /*Note to self (Elizabeth): Do NOT change!*/
+    margin: 0 10px;
+}
+
+.imageCredit > a {
+    color: #fcb314;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/*JUMBOTRON styling ends*/
+
+/*CAROUSEL styling begins*/
+
+#carousel-example-generic {
+    background-color: #336699;
+    /*Picked from: http://www.w3schools.com/colors/colors_picker.asp*/
+}
+
+.carousel-inner > .item > h4 {
+    color: white;
+    text-align: center;
+}
+
+.carousel-inner > .item > a > img {
+/* Change "height: auto;" of ".img-responsive" */
+    height: 250px;
+}
+
+.carousel-caption a {
+    color: #fcb314;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.carousel-indicators .active {
+    border: 2px solid #FFFFFF;
+    background-color: #fcb314;
+}
+
+
+@media only screen and (max-width: 695px) /*Do not touch!*/
+    {.carousel-inner > .item > a > .img-responsive {
+        height: auto;
+        width: auto;
+        }
+    }
+
+/*CAROUSEL styling ends*/
+
+/*FOOD styling begins*/
+
+.foodgridheading {
+    text-align: center;
+    background-color: #fcb314;
+}
+
+.foodgridheading p {
+    font-size: medium;
+}
+
+.row3 > .foodgridcolumn > h4::first-letter {
+    font-size: xx-large;
+    color: #fcb314;
+}/*Resource: http://www.w3schools.com/css/css_pseudo_elements.asp*/
+
+.foodgridcolumn .nav-tabs a {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.modal-body .label-primary {
+    font-size: small;
+}
+
+.modal-body a {
+    color: #fcb314;
+    text-decoration: none;
+    font-size: small;
+}
+
+.modal-footer {
+    text-align: center;
+}
+
+.modal-footer .label {
+    font-size: small;
+}
+
+.orangeLIKE {
+    background-color: #fcb314;
+}/*JQuery .addClass & .removeClass (lines 45 & 51)*/ 
+
+/* FOOD styling ends*/
+
+/*TRANSPORTTION styling begins*/
+
+#transportation .caption {
+    text-align: center;
+}
+
+/*TRANSPORTTION styling ends*/
+
+ul.social li {
+    display: inline;
+    }    
+    
+ul.social li img {
+    height: 50px;
+    }     
+
+/*THIS CLASS HELPS TO CENTER THE SOCIAL MEDIA ICONS IN THE FOOTER. Added by Irene 05-02.*/
+h3.paddingSocial {
+    padding-left: 38px;
+}
+
+
+/*THIS CLASS HELPS TO CENTER THE COPYRIGHT LINE IN THE FOOTER. Added by Irene 05-02.*/
+p.paddingCopyfooter {
+    padding-left: 41px;
+}
+
+footer {
+    background: #333333;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0.90;
+    }    
+      
+footer p, footer h3 {
+    color: #fff;
+    }    
+    
+footer p a {
+    color: #FFF;
+    text-decoration: none;
+    } 
+
+section {
+    width: 29%;
+    float: left;
+    margin: 2% 2%;
+    text-align: center;
+    
+    }
+
+.second {
+    border-top: 1px solid #4D4E50;
+    background-color: #333333;
+    max-height: 50px;
+    text-align: center;
+    opacity: 0.95;
+    }    
+
+ul {
+    list-style: none;
+    } 
+
+
+
+/*BELOW IS THE CSS FOR THE EVENTS PAGE. Added by Irene 04-24*/
+/*THIS COLORS THE BACKGROUND OF THE BOX HOLIDING EACH GROUPS OF EVENTS*/
+#artColor {
+    border: 4px solid #000000;
+    padding: 0px 15px 20px 15px;
+    background:  #fcb314;
+}    
+
+/*THIS APPLIES COLOR TO THE OPENED ACCORDION PANELS. Added by Irene 04-24*/
+
+.panel-title {
+    color: #ffffff;    
+}
+
+/* BACKGROUND IMAGES FOR ACCORDION PANELS.  Added by Irene 05-08*/
+#panel-art {
+    background-image: url("../images/chagall.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#panel-dance {
+    background-image: url("../images/degas_dancer.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#panel-music {
+    background-image: url("../images/musical_note.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#panel-theatre {
+    background-image: url("../images/theatre_scene.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#tony-awards {
+    background-image: url("../images/tony_awards.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    color: #ffffff;
+    height: 275px;
+    border: 5px solid #000000;
+    padding: 0px 15px 20px 15px;
+    
+}
+
+
+
+
+
+#event_bckgrd {
+    background-image: url("../images/background_brown.jpg");
+    background-size:  100% 100%;
+    background-repeat: no-repeat;
+    margin-top: -30px;
+}
+
+
+/*END OF BACKGROUND IMAGES FOR ACCORDION PANELS - Added by Irene 05-08 */
+
+/*THIS GIVES COLOR TO EACH BUTTON ON EVERY ACCORDION PANEL. Added by Irene 04-25.*/
+#accord_1, #accord_2, #accord_3, #accord_4, #accord_5, #accord_6, 
+    #accord_7, #accord_8, #accord_9, #accord_10, #accord_11, #accord_12, 
+    #accord_13, #accord_14, #accord_15, #accord_16, #accord_17, #accord_18 {
+    background: #d2691e;}
+
+/*BELOW IS THE STYLE FOR THE MAIN CONTENT AREA Added by Irene 04-25.*/
+.main_content_head {
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+}
+/*ABOVE IS THE CSS FOR THE EVENTS PAGE. Added by Irene 04-24*/
+
+
+
+.carousel-inner img {
+  margin: auto;
+} 
+
+/*
+.carousel img {
+    min-width: 100%;
+} 
+*/
+
+
+
+
+/*
+footer {
+    background: #333333;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0.90;
+    }    
+    
+    
+footer p, footer h3 {
+    color: #fff;
+    }    
+footer p a {
+    color: #FFF;
+    text-decoration: none;
+    } 
+
+ul.social li {
+    display: inline;
+    }    
+    
+ul.social li img {
+    height: 20px;
+    }     
+    
+.second {
+    border-top: 1px solid #4D4E50;
+    background-color: #333333;
+    max-height: 50px;
+    text-align: center;
+    opacity: 0.95;
+    }    
+
+section {
+    width: 29%;
+    float: left;
+    margin: 2% 2%;
+    text-align: center;
+    
+    }
+
+  section {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+ 
+} */
+
+/*Lisa, see chat message.
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-width: 20px;
+    border-color: Black;
+}*/
+
+#help{
+    height:300px;
+}
+
+/*
+.film {
+  
+  border-style:solid;
+  border-color:#287EC7;
+  width: 320px;
+  height: 227px;
+  margin-top: 22px;  
+  margin-left: 22px;
+}
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,900);
+
+.module {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(http://s32.postimg.org/61wclu8hx/cinema.jpg);
+  background-size: cover;
+  width: 300px;
+  height: 200px;
+  margin: 44px 0 0 10px;
+  position: relative;
+  float: left;
+}
+
+.film h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 35px;
+  transform: translate(-50%, -50%);
+}
+

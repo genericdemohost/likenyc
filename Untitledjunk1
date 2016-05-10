@@ -1,0 +1,119 @@
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+
+
+<div class="container">
+
+<div class="row">
+<!-- <div class="col-sm-1">
+    
+<a href="#" class="thumbnail">
+      <img src="#" alt="#">
+  </a>
+  </div>     -->
+  
+<div class="col-sm-2 col-sm-offset-1">
+    
+<a href="http://www.mta.info/" class="thumbnail">
+      <img src="http://s32.postimg.org/so0e52z11/killerdogs.jpg" alt="Google Maps">
+  </a>
+  <div class="caption">
+  <h3>Google Maps</h3>
+  </div>
+</div>
+
+<div class="col-sm-2">
+    
+<a href="#" class="thumbnail">
+      <img src="#" alt="MTA NYC Subways & Buses">
+  </a>
+  <div class="caption">
+  <h3>NYC Subways & Buses</h3>
+  </div>
+  </div>
+  
+<div class="col-sm-2">
+    
+<a href="#" class="thumbnail">
+      <img src="#" alt="Long Island Railroad">
+  </a>
+  <div class="caption">
+  <h3>Long Island Railroad</h3>
+  </div>
+  </div>
+  
+<div class="col-sm-2">
+    
+<a href="#" class="thumbnail">
+      <img src="#" alt="Metro North Railroad">
+  </a>
+  <div class="caption">
+  <h3>Metro North Railroad</h3>
+  </div>
+  </div>
+  
+<div class="col-sm-2">
+    
+<a href="www2.gmu.edu" class="thumbnail">
+      <img src="http://s32.postimg.org/so0e52z11/killerdogs.jpg" alt="Bridges & Tunnels">
+  </a>
+  <div class="caption">
+  <h3>Bridges & Tunnels</h3>
+  </div>
+  </div>
+  <!--
+<div class="col-sm-1">
+    
+<a href="#" class="thumbnail">
+      <img src="#" alt="#">
+  </a>
+  </div>  
+  -->
+                
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+<body>
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+
+    <div class="jumbotron" id="jumbotron1">
+      <h1> Like NYC</h1>
+      <h3>FILM!</h3>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn More <span class="glyphicon glyphicon-record"></span> </a></p>
+    </div>  
+-->
+
+<!-- NAV STARTS HERE
+  
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav class="navbar navbar-inverse navbar-fixed-top">-">
+  <div class="nav-header">
+    <a class="navbar-brand" href="index.html">Like NYC</a>
+    
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+  </div>  
+    <div class="collapse navbar-collapse nav navbar-nav navbar-right" id="myNavbar">
+      
+          <li><a href= "index.html">Home</a></li>
+          <li><a href= "food.html">Food</a></li>
+          <li class= "active"><a href= "film.html">Film</a></li>
+          <li><a href= "events.html">Events</a></li>
+    
+    </div>    
+  
+</nav>
+NAV ENDS HERE -->
+
+

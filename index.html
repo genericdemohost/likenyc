@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+    <title>Project Code Phase 2 - Group Project</title><!-- Bootstrap -->
+    <link href=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    rel="stylesheet">
+    <link href=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"
+    rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    
+    <!-- trivia styling-->
+    <style type="text/css">
+.questionBlock {display:none; background-color:#fcb314; height:55px; border-radius:15px 50px 30px;
+  margin:0 auto; width:655px;
+}
+.qa{ font-family:palatino; font-size:17px;}
+.quiztitle{text-align:center;}
+#qzbtn{border:none;}
+.scoreBtn{background-color:#fcb314; border:none;}
+.aboutUs{text-align:center;}
+</style>
+
+<script type="text/javascript">
+
+
+var answers = new Array(10);        
+answers[0] = "2"; 
+answers[1] = "3";
+answers[2] = "4";
+answers[3] = "4";
+answers[4] = "1";
+answers[5] = "3";
+answers[6] = "2";
+answers[7] = "4";
+answers[8] = "1";
+answers[9] = "3";
+
+var currentQues = 0;		
+var numQues = answers.length;	
+var numChoi = 4;	        
+
+function getScore(form) {
+ var score = 0;													
+ var currElt;													
+ var currSelection;
+ for (i=0; i<numQues; i++) {									
+  currElt = i*numChoi;											 
+  for (j=0; j<numChoi; j++) {									
+   currSelection = form.elements[currElt + j];					
+   if (currSelection.checked) {								
+    if (currSelection.value == answers[i]) { 				
+	  score++;													
+      break; }	  	      									
+   }
+  }
+ }
+ 
+
+ score = Math.round(score/numQues*100); 						
+ form.percentage.value = score + "%";						
+ return false;									
+}
+function clearQuestions() {
+  var sel = document.getElementById('questionBlock').getElementsByTagName('div');
+  for (var i=0; i<sel.length; i++) {
+	document.getElementById(sel[i].id).style.display = 'none';
+  }
+}
+function nextQuestion() {
+  clearQuestions();
+  document.getElementById('q'+(currentQues+1)).style.display = 'block'; 
+  currentQues++;  if (currentQues > numQues) { currentQues--; }
+}
+
+ </script>
+<!--end trivia styling-->
+
+ 
+</head>
+
+<body onload="startTime()"> <!-- Needed for digital clock. -->
+  <noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+  <!-- Responsive Collapsing NAVBAR -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+
+  <div class="navbar-header" role="navigation"> <!-- Separate divs for brand & collapsible elements keesp things inline -->
+    <a class="navbar-brand" href="index.html" title="L.I.K.E." alt="L.I.K.E.">L.I.K.E.<span class="glyphicon glyphicon-apple"></span></a> <!-- Brand will be visible in all views. -->
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+  </div> <!-- class="navbar-header" role="navigation" -->
+
+  <div class="collapse navbar-collapse" role="navigation" id=myNavbar>
+    <ul class="nav <!-- navbar-nav --> navbar-left"> <!-- Social Media GLYPHICONS will disappear in mobile view.-->
+      <a class="btn navbar-btn" href="https://www.facebook.com/" target="_blank" role="button"><img src="http://www.w3newbie.com/wp-content/uploads/facebook1.png" title="Facebook" alt="Facebook"></a>
+      <a class="btn navbar-btn" href="https://twitter.com/" target="_blank" role="button"><img src="http://www.w3newbie.com/wp-content/uploads/twitter1.png" title="Twitter" alt="Twitter"></a>
+      <a class="btn navbar-btn" href="https://www.youtube.com/" target="_blank" role="button"><img src="http://www.w3newbie.com/wp-content/uploads/youtube1.png" title="YouTube" alt="YouTube"></a>
+      <!-- Reference: http://getbootstrap.com/components/#navbar-buttons -->
+      <!--
+      <li><a href="https://www.facebook.com/" target="_blank"><img src="http://www.w3newbie.com/wp-content/uploads/facebook1.png" title="Facebook" alt="Facebook" /></a></li>
+      <li><a href="https://twitter.com/" target="_blank"><img src="http://www.w3newbie.com/wp-content/uploads/twitter1.png" title="Twitter" alt="Twitter" /></a></li>
+      <li><a href="https://www.youtube.com/" target="_blank"><img src="http://www.w3newbie.com/wp-content/uploads/youtube1.png" title="YouTube" alt="YouTube" /></a></li>
+      -->
+    </ul>
+    <ul class="nav navbar-nav navbar-right"> <!-- Menu will collapse to icon bars in mobiile view.-->
+      <li class= "active"><a href= "index.html" title="Home" alt="Home">Home</a></li>
+      <li><a href= "food.html" title="Food" alt="Food">Food</a></li>
+      <li><a href= "film.html" title="Film" alt="Film">Film</a></li>
+      <li><a href= "events.html" title="Events" alt="Events">Events</a></li>
+    </ul>
+  </div> <!-- class="collapse navbar-collapse" role="navigation" -->
+  
+  </div> <!--class="container-fluid" -->
+  </nav>
+  
+  <!-- JUMBOTRON -->
+  <div class="jumbotron" id="jumbotron1">
+    <div class="container-fluid">
+    <!-- Reference: http://getbootstrap.com/components/#jumbotron -->  
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1></h1>
+      <br>
+      <br>
+      <div id="time" align="left">
+        <h5>Local Time</h5>
+        <p id="digitalclock"></p>
+      </div>
+      <div id="weather" align="right">
+        <h5>Weather</h5>
+        <a class="btn btn-primary btn-sm" href="https://weather.com/weather/today/l/USNY0996:1:US" target="_blank" role="button" title="The Weather Channel" alt="The Weather Channel">Info</a>
+      </div>
+    </div> <!-- class="container-fluid" -->
+  </div> <!-- class="jumbotron" id="jumbotron1" -->
+
+  <!--About Us section-->
+  
+  <div class="welcomeheader"><p class="aboutUs"><h5 class="aboutUs">
+   
+  Welcome to L.I.K.E. NYC, your dedicated guide to the navigating the "concrete-jungle" with insider tips and up-to-minute happening
+  around New York City. With L.I.K.E. as your source, we give you the most current news on New York's cultural events, shows and 
+  diverse cuisine from around the world. We always strive to include Including local family-friendly activities, date-night suggestions 
+  and secret hide aways right here in our backyard.
+  </br>
+  Although NYC is the "City that Never Sleeps", we work hard to recommend events that appeal to your schedule while 
+  adding in some R&R. Out of time to explore certain events? Fret not my friend and remember you're always Welcome to New York; it's been waiting for you. 
+  </h5></p>
+  </div>
+
+       
+<!--        <span class="glyphicon glyphicon-record"></span></a>
+        </p> -->
+    </div>
+
+<!-- NAV STARTS HERE
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="nav-header">
+            <a class="navbar-brand" href="#">L.I.K.E. NYC</a> <button class=
+            "navbar-toggle" data-target="#myNavbar" data-toggle="collapse"
+            type="button"><span class="icon-bar"></span> <span class=
+            "icon-bar"></span> <span class="icon-bar"></span></button>
+
+            <div class="collapse navbar-collapse nav navbar-nav navbar-right"
+            id="myNavbar">
+                <ul>
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+
+
+                    <li>
+                        <a href="food.html">Food</a>
+                    </li>
+
+
+                    <li>
+                        <a href="film.html">Film</a>
+                    </li>
+
+
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+NAV ENDS HERE -->
+
+<!--Trivia starts here-->
+
+<form name="quiz" onsubmit="return getScore(this)" id="quizForm">
+<div id="questionBlock" style="text-align:center">
+  <p class="qzpara" style="text-align:center" background-color="#fcb314"><h5>Think you know New York? Play L.I.K.E. Trivia</h5></p>
+ 
+<div id="q1" class="questionBlock">
+<p class="qa">1) At which venue would you see <em>Le Nozze Di Figaro</em></p>
+ 
+  <label><input type="checkbox" name="q1" value="4">Carneige Hall</label>
+  <label><input type="checkbox" name="q1" value="3">Highline Ballroom</label>
+  <label><input type="checkbox" name="q1" value="2">Metropolitan Opera House</label>
+  <label><input type="checkbox" name="q1" value="1">Museum of Modern Art</label>
+ 
+</div>
+
+<div id="q2" class="questionBlock">
+<p class="qa">2) What is the primary ingredient of NY Cheesecake</p>
+ 
+  <label><input type="checkbox" name="q2" value="4">Ricotta</label>
+  <label><input type="checkbox" name="q2" value="3">Heavy or Sour cream</label>
+  <label><input type="checkbox" name="q2" value="2">Graham Crackers</label>
+  <label><input type="checkbox" name="q1" value="1">Fruit Compote</label>
+ 
+</div>
+
+<div id="q3" class="questionBlock">
+<p class="qa">3) Which of these actors is a native New Yorker</p>
+ 
+  <label><input type="checkbox" name="q3" value="4">Olivia Wilde</label>
+  <label><input type="checkbox" name="q3" value="3">Tina Fey</label>
+  <label><input type="checkbox" name="q3" value="2">Leonardo DiCaprio</label>
+  <label><input type="checkbox" name="q1" value="1">Sylvester Stalone</label>
+ 
+</div>
+
+<div id="q4" class="questionBlock">
+<p class="qa">4) The annual NYC Marathon starts in which borough</p>
+ 
+  <label><input type="checkbox" name="q4" value="4">Staten Island</label>
+  <label><input type="checkbox" name="q4" value="3">Queens</label>
+  <label><input type="checkbox" name="q4" value="2">Brooklyn</label>
+  <label><input type="checkbox" name="q1" value="1">Manhattan</label>
+ 
+</div>
+
+<div id="q5" class="questionBlock">
+<p class="qa">5) If you are on 5th Ave and 67th Street, you are in...</p>
+ 
+  <label><input type="checkbox" name="q5" value="4">Upper Westside</label>
+  <label><input type="checkbox" name="q5" value="3">Downtown</label>
+  <label><input type="checkbox" name="q5" value="2">Midtown<label>
+  <label><input type="checkbox" name="q1" value="1">Walker's Paradise</label>
+ 
+</div>
+
+<div id="q6" class="questionBlock">
+<p class="qa">6) You can score discount Broadway tickets by</p>
+ 
+ 
+  <label><input type="checkbox" name="q6" value="4">Sneaking through the <em> Stage Door</em></label>
+  <label><input type="checkbox" name="q6" value="3">Lottery</label>
+  <label><input type="checkbox" name="q6" value="2">Paying full price</label>
+  <label><input type="checkbox" name="q1" value="1">Broadwayextracheap.com</label>
+ 
+ 
+</div>
+
+<div id="q7" class="questionBlock">
+<p class="qa">7) Yankee stadium is located in which borough</p>
+ 
+  <label><input type="checkbox" name="q7" value="4">New Jersey</label>
+  <label><input type="checkbox" name="q7" value="3">Queens</label>
+  <label><input type="checkbox" name="q7" value="2">Bronx</label>
+  <label><input type="checkbox" name="q1" value="1">Staten Island</label>
+ 
+</div>
+
+<div id="q8" class="questionBlock">
+<p class="qa">8) What is the total length of the Brooklyn bridge</p>
+ 
+  <label><input type="checkbox" name="q8" value="4">5,989 feet</label>
+  <label><input type="checkbox" name="q8" value="3">7,564 feet</label>
+  <label><input type="checkbox" name="q8" value="2">4,373 feet</label>
+  <label><input type="checkbox" name="q1" value="1">2,456 feet</label>
+ 
+</div>
+
+<div id="q9" class="questionBlock">
+<p class="qa">9) Eating from a food truck is...</p>
+
+  <label><input type="checkbox" name="q9" value="3">expensive</label>
+  <label><input type="checkbox" name="q9" value="2">fuggedaboutit</label>
+  <label><input type="checkbox" name="q9" value="1">...what's a food truck?</label>
+  <label><input type="checkbox" name="q1" value="1">safe</label>
+ 
+</div>
+
+<div id="q10" class="questionBlock">
+<p class="qa">10) The movie Ghostbusters filmed in which library </p>
+
+  <label><input type="checkbox" name="q10" value="4">Mid-Manhattan</label>
+  <label><input type="checkbox" name="q10" value="3">Schwarzman</label>
+  <label><input type="checkbox" name="q10" value="2">Epiphany</label>
+  <label><input type="checkbox" name="q10" value="1">Lincoln Center</label>
+ 
+</div>
+
+<div id="q11" class="questionBlock">
+<!--<input type="submit" value="Submit">-->
+Score = <strong><input type="text" class="scoreBtn" size="5" name="percentage" disabled></strong>
+
+</div>
+</br>
+<button onclick="nextQuestion()" id="qzbtn" class=".btn-md btn-primary">Let's Play!</button>
+</div>
+</form>
+
+
+
+<br>
+
+
+  <div id="footer"> <!-- PLACED ENTIRE FOOTER IN DIV TO STICK TO BOTTOM-->
+  <footer class="first"> <!--FIRST FOOTER BEGINS -->
+    <section>
+        <h3>L.I.K.E. NYC</h3>
+        <p>718-456-0000<br>
+        57 Williamsbridge Road<br>
+        Suite 20<br>
+        Staten Island, NY 10312<br></p>
+    </section>
+    
+    <section><!-- SOCIAL MEDIA LINKS START -->
+    <h3 class="paddingSocial">Connect With Us</h3>
+    <ul class="social">
+        <li><a href="https://www.facebook.com/"><img src="http://www.w3newbie.com/wp-content/uploads/facebook1.png" /></a></li>
+        <li><a href="https://twitter.com/"><img src="http://www.w3newbie.com/wp-content/uploads/twitter1.png" /></a></li>
+        <li><a href="https://www.youtube.com/"><img src="http://www.w3newbie.com/wp-content/uploads/youtube1.png" /></a></li>
+    </ul>
+</section><!-- SOCIAL MEDIA LINKS END -->
+
+<section><!-- NEWSLETTER FORM BEGINS HERE. Added by Irene 05-02.-->
+        <h3>Want our weekly newsletter?</h3>
+        <form class="form-inline">
+          <div class="form-group">
+            <label for="newsletter">Email</label>
+            <input type="email" class="form-control" id="newsletter" style="width: 266px"
+              placeholder="Enter your email address here">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+  </section><!-- NEWSLETTER FORM ENDS HERE. Added by Irene 05-02.-->
+
+
+
+</footer><!-- FIRST FOOTER ENDS -->
+
+<footer class="second"><!-- SECOND FOOTER BEGINS -->
+    <p class="paddingCopyfooter">&#169Copyright - L.I.K.E., 2016.</p>
+</footer><!-- SECOND FOOTER ENDS -->   
+      </div> <!-- PLACED ENTIRE FOOTER IN DIV TO STICK TO BOTTOM-->
+
+
+
+
+
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+
+    
+      
+      
+    
+    <!-- Our Javascript File DO NOT DELETE -->
+    <script src="js/ourjavascript.js"></script>
+  
+    </body>
+</html>
+
+ 
