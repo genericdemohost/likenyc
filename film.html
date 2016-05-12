@@ -65,7 +65,7 @@
   <!-- JUMBOTRON -->
   <div class="jumbotron" id="jumbotron1">
     <div class="container-fluid">
-    <!-- Reference: http://getbootstrap.com/components/#jumbotron -->  
+      <!-- Reference: http://getbootstrap.com/components/#jumbotron -->  
       <br>
       <br>
       <br>
@@ -78,17 +78,20 @@
       <h1>FILM <span class="glyphicon glyphicon-film"></span></h1>
       <br>
       <br>
-      <div id="time" align="left">
+      <div id="time">
         <h5>Local Time</h5>
         <p id="digitalclock"></p>
-      </div>
-      <div id="weather" align="right">
+      </div> <!-- id="time" -->
+      <div id="weather">
         <h5>Weather</h5>
-        <a class="btn btn-primary btn-sm" href="https://weather.com/weather/today/l/USNY0996:1:US" target="_blank" role="button" title="The Weather Channel" alt="The Weather Channel">Info</a>
-      </div>
+        <a class="btn btn-warning btn-sm badge" href="https://weather.com/weather/today/l/USNY0996:1:US" target="_blank" role="button" title="The Weather Channel" alt="The Weather Channel">Info</a>
+      </div> <!-- id="weather" -->
     </div> <!-- class="container-fluid" -->
+    <br>
+    <div class="imageCredit">
+      <a href="http://www.pickywallpapers.com/1920x1080/around-the-world/usa/nyc-letters-wallpaper/download/" target="_blank" title="Image Credit" alt="Image Credit">Image Credit</a>
+    </div> <!-- class="imageCredit" -->
   </div> <!-- class="jumbotron" id="jumbotron1" -->
-  
 
 
                                       <!--MODAL BEGINS -->
@@ -195,7 +198,83 @@
       </a>
     </div><!-- /.carousel END -->    
 
-    <hr>
+  <!--TRANSPORTATION heading begins-->
+  <div class="row4 container-fluid">
+    <div class="col-xs-12 foodgridcolumn">
+      <h2 class="foodgridheading">Transportation Info <img src="img/trans//glyph-transport.png"></h2>
+    </div> <!--class="col-xs-12 foodgridcolumn" -->
+  </div> <!-- class="row4 container-fluid" -->
+  <!--TRANSPORTATION heading ends-->
+      
+  <!--TRANSPORTATION thumbnails begins-->
+  <div class="container-fluid" id="transportation">
+    <div class="row5">
+    
+      <!--Backup in case "col-sm-offset-1" doesn't work.
+      <div class="col-sm-1">
+        <a href="#" class="thumbnail"><img src="#" alt="#"></a>
+      </div>
+      -->
+  
+      <div class="col-sm-2 col-sm-offset-1">
+        <div class="thumbnail">
+          <a href="https://www.google.com/maps/place/New+York,+NY/@40.779965,-73.9347846,12z/data=!4m2!3m1!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62" target="_blank"><img src="img/trans/nycGoogleMap.png" style="height: 100%; width: 100%;" title="New York, NY on Google Maps" alt="New York, NY on Google Maps"></a>
+          <div class="caption">
+            <h4><a href="https://www.google.com/maps/place/New+York,+NY/@40.779965,-73.9347846,12z/data=!4m2!3m1!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62" target="_blank" title="New York, NY on Google Maps" alt="New York, NY on Google Maps">Google Maps <span class="glyphicon glyphicon-search"></span></a></h4>
+          </div> <!-- class="caption" -->
+        </div> <!-- class="thumbnail" -->
+      </div> <!-- class="col-sm-2 col-sm-offset-1" -->
+
+      <div class="col-sm-2">
+        <div class="thumbnail">
+          <a href="http://www.mta.info/nyct" target="_blank"><img src="img/trans/metrocard.jpg" style="height: 100%; width: 100%;" title="Subways & Buses" alt="Subways & Buses"></a>
+          <div class="caption">
+            <h4><a href="http://www.mta.info/nyct" target="_blank" title="Subways & Buses" alt="Subways & Buses">Subways & Buses</a></h4>
+          </div> <!-- class="caption" -->
+        </div> <!-- class="thumbnail" -->
+      </div> <!-- class="col-sm-2 -->
+
+      <div class="col-sm-2">
+        <div class="thumbnail">
+          <a href="http://www.mta.info/lirr" target="_blank"><img src="img/trans/lirr.jpg" style="height: 100%; width: 100%;" title="Long Island Railroad" alt="Long Island Railroad"></a>
+          <div class="caption">
+            <h4><a href="http://www.mta.info/lirr" target="_blank" title="Long Island Railroad" alt="Long Island Railroad">Long Island Railroad</a></h4>
+          </div> <!-- class="caption" -->
+        </div> <!-- class="thumbnail" -->
+      </div> <!-- class="col-sm-2 -->
+
+      <div class="col-sm-2">
+        <div class="thumbnail">
+          <a href="http://www.mta.info/mnr" target="_blank"><img src="img/trans/metro-north.jpg" style="height: 100%; width: 100%;" title="Metro-North Railroad" alt="Metro-North Railroad"></a>
+          <div class="caption">
+            <h4><a href="http://www.mta.info/mnr" target="_blank" title="Metro-North Railroad" alt="Metro-North Railroad">Metro-North Railroad</a></h4>
+          </div> <!-- class="caption" -->
+        </div> <!-- class="thumbnail" -->
+      </div> <!-- class="col-sm-2 -->
+
+      <div class="col-sm-2">
+        <div class="thumbnail">
+          <a href="http://www.mta.info/bandt" target="_blank"><img src="img/trans/gwBridge.jpg" style="height: 100%; width: 100%;" title="Bridges & Tunnels" alt="Bridges & Tunnels"></a>
+          <div class="caption">
+            <h4><a href="http://www.mta.info/bandt" target="_blank" title="Bridges & Tunnels" alt="Bridges & Tunnels">Bridges & Tunnels</a></h4>
+          </div> <!-- class="caption" -->
+        </div> <!-- class="thumbnail" -->
+      </div> <!-- class="col-sm-2 col-sm-offset-1" -->
+
+      <!--Backup in case thumbnails do not center in row.
+      <div class="col-sm-1">
+        <a href="#" class="thumbnail"><img src="#" alt="#"></a>
+      </div>  
+      -->
+                
+    </div> <!-- class="row" -->
+  </div> <!-- class="container-fluid" -->
+  <!--TRANSPORTATION thumbnails ends-->
+  <!-- Reference: http://getbootstrap.com/components/#thumbnails-custom-content -->
+
+  <br>
+  <br>
+  <br>
   <div id="footer"> <!-- PLACED ENTIRE FOOTER IN DIV TO STICK TO BOTTOM-->
   <footer class="first"> <!--FIRST FOOTER BEGINS -->
     <section>

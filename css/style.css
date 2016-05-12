@@ -68,16 +68,18 @@ body {
     background-color: #fcb314;
 }
 
-.imageCredit {
+#jumbotron1 .imageCredit {
     float: right; /*Note to self (Elizabeth): Do NOT change!*/
-    margin: 0 10px;
+    margin: 0 25px;
 }
 
-.imageCredit > a {
+#jumbotron1 .imageCredit > a {
     color: #fcb314;
     font-size: 12px;
     text-decoration: none;
 }
+
+/*Tried to apply @media query to #jumbotron1 background-image but did not work. Believe it has to do with original image being wallpaper.*/
 
 /*JUMBOTRON styling ends*/
 
@@ -88,30 +90,40 @@ body {
     /*Picked from: http://www.w3schools.com/colors/colors_picker.asp*/
 }
 
-.carousel-inner > .item > h4 {
+#carousel .carousel-inner > .item > h4 {
     color: white;
     text-align: center;
 }
 
-.carousel-inner > .item > a > img {
+#carousel .carousel-inner > .item > a > img {
 /* Change "height: auto;" of ".img-responsive" */
     height: 250px;
 }
 
-.carousel-caption a {
+#carousel .carousel-caption a {
     color: #fcb314;
     text-decoration: none;
     font-weight: bold;
 }
 
-.carousel-indicators .active {
+#carousel .carousel-indicators .active {
     border: 2px solid #FFFFFF;
     background-color: #fcb314;
 }
 
+#carousel .imageCredit {
+    float: right; /*Note to self (Elizabeth): Do NOT change!*/
+    margin: 0 65px;
+}
+
+#carousel .imageCredit > a {
+    color: #fcb314;
+    font-size: 10px;
+    text-decoration: none;
+}
 
 @media only screen and (max-width: 695px) /*Do not touch!*/
-    {.carousel-inner > .item > a > .img-responsive {
+    {#carousel .carousel-inner > .item > a > .img-responsive {
         height: auto;
         width: auto;
         }
@@ -169,6 +181,17 @@ body {
 #transportation .caption {
     text-align: center;
 }
+
+#transportation .thumbnail {
+    height: 100px;
+}
+
+@media only screen and (max-width: 770px) /*Do not touch!*/
+    {#transportation .thumbnail {
+        height: auto;
+        width: auto;
+        }
+    }
 
 /*TRANSPORTTION styling ends*/
 
